@@ -4,7 +4,7 @@ public class story {
 public quest start;
 public quest current;
 story(){
-	start= new quest("ѕервый ваш шаг","¬ы только что отстали от походной группы, вы здесь новенький, так что вашего отсутстви€ никто не заметит но вы решаете"
+	start= new quest("ѕервый ваш шаг","¬ы только что отстали от походной группы, вы здесь новенький, так что вашего отсутстви€ никто не заметит но вы решаете\n"
 			+"(1)√ромоко кричать на помощь, в надежде что вас услышат\n"
 			+"(2)ѕопытатьс€ выйти к населенному пункту или дороге"
 			,2,50,0,0); {
@@ -14,9 +14,13 @@ story(){
 	}
 
 }
+
 public void go(int  num) {
-	if (num<=current.direction.length)
+	if (num<=current.direction.length) {
+
 		current=current.direction[num-1];
+
+	}
 	else System.out.println("¬ы можете выбрать из"+current.direction.length+"вариант");
 }
 public boolean isEnd() {

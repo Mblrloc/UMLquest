@@ -2,13 +2,13 @@ package Default;
 
 import java.util.Scanner;
 
+public class manya {
 
-	public class manya {
+	public static Character wanderer;
+	public static story story;
 
-		public static Character wanderer;
-		public static story story;
-		
-	public void main(String[] args) {
+
+	public static void main(String[] args) {
 
 		Scanner in=new Scanner(System.in);
 		wanderer=new Character();
@@ -18,12 +18,11 @@ import java.util.Scanner;
 		wanderer.Hunger+=story.current.TekHunger;
 		wanderer.Wound+=story.current.TekWound;
 		System.out.println(story.current.subject);
+		System.out.println(story.current.text);
 		if(story.isEnd()) {System.out.println("the end!");return;}
 		story.go(in.nextInt());
 		}
+	
 	}
 	}
-
-
-
 
